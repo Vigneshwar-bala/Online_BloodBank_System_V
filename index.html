@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Blood Bank System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Online Blood Bank System</h1>
+    </header>
+
+    <section class="container">
+        <!-- Registration Form -->
+        <div class="form-section">
+            <h2>User Registration</h2>
+            <form id="registrationForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="bloodGroup">Blood Group:</label>
+                <input type="text" id="bloodGroup" required>
+
+                <label for="contact">Contact Info:</label>
+                <input type="text" id="contact" required>
+
+                <button type="button" onclick="registerUser()">Register</button>
+            </form>
+        </div>
+
+        <!-- Registered Users Display -->
+        <div class="registered-users">
+            <h2>Registered Users</h2>
+            <table id="usersTable">
+                <tr>
+                    <th>Name</th>
+                    <th>Blood Group</th>
+                    <th>Contact Info</th>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Blood Inventory -->
+        <div class="inventory-section">
+            <h2>Available Blood Inventory</h2>
+            <table id="inventoryTable">
+                <tr>
+                    <th>Blood Group</th>
+                    <th>Quantity</th>
+                    <th>Storage Area</th>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Blood Request Form -->
+        <div class="form-section">
+            <h2>Request Blood</h2>
+            <form id="requestForm">
+                <label for="requestBloodGroup">Blood Group Needed:</label>
+                <input type="text" id="requestBloodGroup" required>
+
+                <button type="button" onclick="postRequest()">Request Blood</button>
+            </form>
+            <p id="requestResult"></p>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
